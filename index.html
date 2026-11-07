@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTech Academy - Gerenciamento de Alunos</title>
+</head>
+<body>
+    <h1>DevTech Academy</h1>
+    <h2>Gerenciamento de Alunos</h2>
+
+    <!-- Exercício 1: Formulário de cadastro -->
+    <form id="formAluno">
+        <input type="hidden" id="indiceEdicao" value="">
+
+        <p>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" required>
+        </p>
+        <p>
+            <label for="idade">Idade:</label><br>
+            <input type="number" id="idade" min="0" required>
+        </p>
+        <p>
+            <label for="curso">Curso:</label><br>
+            <select id="curso" required>
+                <option value="">-- Selecione --</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+            </select>
+        </p>
+        <p>
+            <label for="notaFinal">Nota Final:</label><br>
+            <input type="number" id="notaFinal" min="0" max="10" step="0.1" required>
+        </p>
+        <p>
+            <button type="button" id="btnCadastrar">Cadastrar</button>
+            <button type="button" id="btnCancelar" hidden>Cancelar edição</button>
+        </p>
+    </form>
+
+    <!-- Exercício 1: Tabela de registros -->
+    <h2>Alunos Cadastrados</h2>
+    <table border="1" id="tabelaAlunos">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Curso</th>
+                <th>Nota Final</th>
+                <th>Situação</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="corpoTabela">
+        </tbody>
+    </table>
+
+    <!-- Exercício 4: Relatórios -->
+    <h2>Relatórios</h2>
+    <p>
+        <button type="button" id="btnAprovados">Listar aprovados</button>
+        <button type="button" id="btnMediaNotas">Média das notas</button>
+        <button type="button" id="btnMediaIdades">Média das idades</button>
+        <button type="button" id="btnOrdemAlfabetica">Nomes em ordem alfabética</button>
+        <button type="button" id="btnPorCurso">Quantidade por curso</button>
+    </p>
+    <div id="resultadoRelatorio"></div>
+
+    <script src="js/aluno.js"></script>
+    <script src="js/relatorios.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
